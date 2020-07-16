@@ -3,6 +3,8 @@
   hosts: localhost
   connection: local
   gather_facts: no
+  vars:
+    vm_hostname: testvm_2
   vars_files:
     - vault/vcenter_vars.yml
   tasks:
@@ -12,7 +14,7 @@
       username: "{{ vcenter_user }}"
       password: "{{ vcenter_pass }}"
       validate_certs: False
-      name: testvm_2
+      name: "{{ vm_hostname }}"
       template: centOS7_minimal
       datacenter: DC1
       folder: /vm
