@@ -33,7 +33,7 @@
         datastore: "{{ vm_datastore }}"
       networks:
       - name: server_network
-        ip: '{{ custom_ip }}'
+        ip: 172.16.113.244
         netmask: 255.255.255.0
         gateway: 172.16.113.2
         dns_servers:
