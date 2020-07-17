@@ -4,7 +4,7 @@
   connection: local
   gather_facts: no
   vars:
-    vm_hostname: testvm_2
+    vm_name: testvm_2
     vm_template: template_centos7_tiny
   vars_files:
     - vault/vcenter_secrets.yml
@@ -15,7 +15,7 @@
       username: "{{ vcenter_user }}"
       password: "{{ vcenter_pass }}"
       validate_certs: False
-      name: "{{ vm_hostname }}"
+      name: "{{ vm_name }}"
       template: "{{ vm_template }}"
       datacenter: DC1
       folder: /vm
