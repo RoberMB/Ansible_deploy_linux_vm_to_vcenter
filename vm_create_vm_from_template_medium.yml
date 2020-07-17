@@ -31,6 +31,14 @@
       - size_gb: 6
         type: thin
         datastore: "{{ vm_datastore }}"
+      networks:
+      - name: server_network
+        ip: '{{ custom_ip }}'
+        netmask: 255.255.255.0
+        gateway: 172.16.113.2
+        dns_servers:
+        - 172.16.113.2
+        - 172.16.113.3
       hardware:
         memory_mb: 1024
         num_cpus: 1
