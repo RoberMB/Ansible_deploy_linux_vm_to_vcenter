@@ -32,7 +32,7 @@
         type: thin
         datastore: "{{ vm_datastore }}"
       networks:
-      - name: server_network
+      - name: VM Network
         ip: 172.16.113.244
         netmask: 255.255.255.0
         gateway: 172.16.113.2
