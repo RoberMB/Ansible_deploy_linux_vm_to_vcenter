@@ -11,6 +11,7 @@
     vm_datacenter: "DC1"
     vm_folder: "/vm"
     vm_datastore: datastore1
+    vm_ip: 172.16.113.55
   tasks:
   # Get date
   - set_fact: creationdate="{{lookup('pipe','date "+%Y/%m/%d %H:%M"')}}"
@@ -33,7 +34,7 @@
         datastore: "{{ vm_datastore }}"
       networks:
       - name: VM Network
-        ip: 172.16.113.56
+        ip: "{{ vm_ip }}"
         netmask: 255.255.255.0
         gateway: 172.16.113.2
         dns_servers:
