@@ -20,4 +20,4 @@
       datacenter: DC1
       folder: /vm
       state: poweredon
-      wait_for_ip_address: yes
+      wait_for_ip_address: yes  # It's necessary to have vmware-tools already installed
