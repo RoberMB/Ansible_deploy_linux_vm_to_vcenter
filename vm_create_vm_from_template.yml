@@ -6,7 +6,7 @@
   vars:
     vm_hostname: testvm_2
   vars_files:
-    - vault/vcenter_vars.yml
+    - vault/vcenter_secrets.yml
   tasks:
   - name: Clone the template
     vmware_guest:
