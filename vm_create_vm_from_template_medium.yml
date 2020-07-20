@@ -2,7 +2,6 @@
 - hosts: all
   gather_facts: false
   connection: local
-  ask_variables_on_launch: true
   vars_files:
     - vault/vcenter_secrets.yml
   vars:
